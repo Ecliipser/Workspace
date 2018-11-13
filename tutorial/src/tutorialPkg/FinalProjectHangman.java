@@ -7,7 +7,7 @@ public class FinalProjectHangman {
 	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
 	private static int count = 0;
 
-	
+	//comment
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
