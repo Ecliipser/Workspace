@@ -2,10 +2,10 @@ package tutorialPkg;
 import java.util.Scanner;
 public class FinalProjectHangman {
 
-	private static String[] words = {"terminator", "banana", "computer", "cow", "rain", "water" };
-	private static String word = words[(int) (Math.random() * words.length)];
-	private static String asterisk = new String(new char[word.length()]).replace("\0", "*");
-	private static int count = 0;
+	public static String[] words = {"terminator", "banana", "computer", "cow", "rain", "water" };
+	public static String word = words[(int) (Math.random() * words.length)];
+	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
+	public static int count = 0;
 
 	//comment
 	public static void main(String[] args) {
