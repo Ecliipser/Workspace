@@ -4,16 +4,16 @@ public class FinalProjectHangman {
 
 	public static String[] words = {"terminator", "banana", "computer", "cow", "rain", "water" };
 	public static String word = words[(int) (Math.random() * words.length)];
-	public static String asterisk = new String(new char[word.length()]).replace("\0", "*");
+	public static String dash = new String(new char[word.length()]).replace("\0", "*");
 	public static int count = 0;
 
 	//comment
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		while (count < 7 && asterisk.contains("*")) {
+		while (count < 7 && dash.contains("*")) {
 			System.out.println("Guess any letter in the word");
-			System.out.println(asterisk);
+			System.out.println(dash);
 			String guess = sc.next();
 			hang(guess);
 		}
@@ -21,24 +21,24 @@ public class FinalProjectHangman {
 
 	}
 	public static void hang(String guess) {
-		String newasterisk = "";
+		String newDash = "";
 		for (int i = 0; i < word.length(); i++) {
 			if (word.charAt(i) == guess.charAt(0)) {
-				newasterisk += guess.charAt(0);
-			} else if (asterisk.charAt(i) != '*') {
-				newasterisk += word.charAt(i);
+				newDash += guess.charAt(0);
+			} else if (dash.charAt(i) != '*') {
+				newDash += word.charAt(i);
 			} else {
-				newasterisk += "*";
+				newDash += "*";
 			}
 		}
 
-		if (asterisk.equals(newasterisk)) {
+		if (dash.equals(newDash)) {
 			count++;
 			hangmanImage();
 		} else {
-			asterisk = newasterisk;
+			dash = newDash;
 		}
-		if (asterisk.equals(word)) {
+		if (dash.equals(word)) {
 			System.out.println("Correct! You win! The word was " + word);
 		}
 	}

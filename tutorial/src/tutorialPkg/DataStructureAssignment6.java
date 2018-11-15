@@ -18,6 +18,7 @@ public class DataStructureAssignment6 {
 		artists.add("Artist: Halsey");
 		
 		int choice = 0;
+		boolean flag = true;
 		do {
 		//print library of songs and artists
 		System.out.println();
@@ -33,7 +34,6 @@ public class DataStructureAssignment6 {
 		
 	Scanner input = new Scanner(System.in);
 	int choice1 = input.nextInt();
-	
 	
 	switch(choice1) {
 	case 1:
@@ -58,17 +58,14 @@ public class DataStructureAssignment6 {
 		 
 	case 4:
 		 System.out.println("Bye! ");
+		 flag = false;
 		 break;
 		 
 	default:
 		System.out.println("Invalid option");
-		
 	}//end switch
-		}while(choice != 4);
-	for(int i = 0; i < allSongs.size(); i++) {//print all songs
-		System.out.println(i + " " + allSongs.get(i) 
-							+ " " + artists.get(i));
-	}//end for
+	
+		}while(flag);
 	
 	
 	
