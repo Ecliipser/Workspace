@@ -15,7 +15,7 @@ static Scanner scan = new Scanner(System.in);
 static int choice = 0;
 static String clothes;
 static ArrayList<String> pistol = new ArrayList<>();
-static ArrayList<String> shotgun = new ArrayList<>();
+static ArrayList<String> Shotgun = new ArrayList<>();
 static ArrayList<String> Backpack = new ArrayList<>();
 // makes a backpack which will be filled with items during gameplay
 
@@ -712,10 +712,10 @@ public static void knockKnock() {
     // //sleeps the program for 3 seconds
     System.out.println ("You're going to have to make a choice whether to open the door or not.");
     // System.out.printlns "You're going to have to make a choice whether to open the door or not."
-  }//end else if choice 2
   System.out.println("1. Enter 1 to open Door\n"
   		+ "2. Enter 2 to keep it closed");
   choice = scan.nextInt();
+  }  //end else if choice 2
 
 //    choice= int(input("Enter 1 to open Door, Enter 2 to keep it closed."))
     // creates variable choice and System.out.printlns "Enter 1 to open Door, Enter 2 to keep it closed."
@@ -833,53 +833,42 @@ choice = scan.nextInt();
   
 //  choices = int(input("Enter 1 for Pistol, Enter 2 for Shotgun"))
   // creates the variable choices and System.out.printlns "Enter 1 for Pistol, Enter 2 for Shotgun"
-		  if(choice == 1 && !Backpack.contains("Clothes"))
-			  // if { the user choice equals to Yes and clothes are not in the variable Backpack continue  
-			  if(Backpack.contains("Clothes")) {
-			    // if { Clothes are in Backpack continue  
-			      System.out.println ("You already have clothes. Why would you need more?");
-			      // System.out.printlns "You already have clothes. Why would you need more?"
-			  }//end else if backpack.contains("Clothes")
-			      else if ("Clothes not in Backpack" != null) {
-			    // if { Clothes are not in Backpack continue
-			      Backpack.add("Clothes");
-			      // goes to Backpack and adds the Item "Clothes to it"
-			      }//end else if clothes not in backpack
-if(choice == 1 && !pistol.contains("Backpack")) {
+if(choice == 1 && !pistol.contains("Pistol")) {
 //  if { choices == "1" and "Pistol" not in Backpack;
   // if { the user choice is equal to 1 and Pistol is not in Backpack continue
-  if(pistol.contains("Backpack")) {
+  if(Backpack.contains("Pistol")) {
   //  if { "Pistol" in Backpack;
     // if { "Pistol" is already in the variable Backpakc continue
       System.out.println ("You already have a pistol you goof!");
       // System.out.printlns "You already have a Pistol you goof!"   
   //  if { "Pistol" not in Backpack;
     // if { "Pistol" is not in the variable Backpack continue
-  }//end else if pistol contains in backpack
-}//end if choice 1
-  else if("pistol not in backpack" != null) {
+  }//end if pistol contains in backpack
+  if(!Backpack.contains("Pistol")) {
       System.out.println ("Good choice, flexible gun with lots of options!");
       //System.out.printlns "Good choice, flexible gun with lots of options!"
-      Backpack.add("pistol");
+      Backpack.add("Pistol");
       // Adds the String Pistol to The variable Backpack
   }//end else if pistol not in backpack
-  else if(choice == 2 && !Backpack.contains("shotgun"))
+}//end if choice 1
+
+  if(choice == 2 && !Backpack.contains("Shotgun")) {
   // else if { the user choice is equal to 2 and Shotgun is not in Backpack continue
-  if(shotgun.contains("Backpack")) {  
+  if(Backpack.contains("Shotgun")) {  
    // if { "Shotgun" in Backpack;
     // if { the "Shotgun" string is in Backpack continue
       System.out.println ("You already have a Shotgun you goof!");
     }//end else if choice if shotgun is in backpack
       // System.out.printlns "You already have a Pistol you goof!"
-	 else if("shotgun not in backpack" != null) {
+  if(!Backpack.contains("Shotgun")) {
 //    if { "Shotgun" not in Backpack;
     // if { "Shotgun" string is not in Backpack continue
       System.out.println ("Good choice, Easy kills with this bad boy!");
       // System.out.printlns "Good choice, Easy kills with this bad boy!"
-      Backpack.add("shotgun");
+      Backpack.add("Shotgun");
       // Adds the string "Shotgun" to the variable Backpack
 	 }//end else if shotgun not in backpack
-  //end else if choice 2
+  }//end else if choice 2
 
   else {
   // if { something else other than 1 or 2 is chosen continue
