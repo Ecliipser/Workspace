@@ -8,11 +8,18 @@ public class Invoice {
 	//
 	public Invoice(Customer theCustomer) {
 		this.theCustomer = theCustomer;
+		
+		
+	}
 	
-	
+	public Customer getTheCustomer() {
+		return theCustomer;
+		
 	}
 	public void addToOrder(Product theProduct, int qty) {
-
+		LineItem L1 = new LineItem(theProduct, qty);
+		Item.add(L1);
+		
 	}
 	
 	public void printInvoice() {
@@ -27,7 +34,7 @@ public class Invoice {
 	}
 	
 	public double amountDue() {
-		return amountDue;
+		return amountDue();
 		//returns the total amount due for this order
 	}
 }

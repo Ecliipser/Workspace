@@ -11,6 +11,7 @@ public class TestInvoice {
 		in.addToOrder(new Product("sharks", 105.2),2);
 		in.addToOrder(new Product("lasers",50.5),20);
 		
+		
 		runInvoice(c,in); //runs invoice
 
 		//invoice run 2
@@ -20,5 +21,20 @@ public class TestInvoice {
 		//invoice run 4
 
 	}
+	public static void runInvoice(Customer c, Invoice i) {
+		i.printInvoice();
 
-}
+		if(c.getEvilFunds()- i.amountDue() < 0) {
+			System.out.println("Evil villian credit union to the rescue!!");	
+			c.addFunds(i.amountDue() - c.getEvilFunds());
+			System.out.println("New funds total: " + c.getEvilFunds());
+		}
+		
+		i.printInvoice();
+	}//end runInvoice
+
+}//end TestInvoice
+
+
+
+

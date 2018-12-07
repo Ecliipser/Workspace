@@ -7,26 +7,38 @@ package tutorialPkg;
 public class Customer {
 
 	private String name;
-	private String secretLairLocation;
+	private String Location;
 	private double evilFunds;
 	
+	
 	public Customer() {
-		name = " ";
-		secretLairLocation = " ";
+		name = "null";
+		Location = " ";
 		evilFunds = 0;
+		
+	
 	}
-	public Customer(String secretLairLocation, String name, double evilFunds) {
-		this.secretLairLocation = secretLairLocation;
+	public Customer(String name, String Location, double evilFunds) {
+		this.Location = Location;
 		this.name = name;
 		this.evilFunds = evilFunds;
+		
+		
 	}
 	
 	public String toString() {
-		return "Name:" + name + "SecretLairLocation: " + secretLairLocation + "evilFunds: " + evilFunds;
+		return "Name: " + name + " Location: " + Location + " evilFunds: " + evilFunds;
 	
 	}
 	//add funds to customers evilfunds
-	public void addFunds(double evilFunds) {
+	public void addFunds(double addFunds) {
+		evilFunds += addFunds;
+	}
+	public void setEvilFunds(double evilFunds) {
 		this.evilFunds = evilFunds;
+	}
+	
+	public double getEvilFunds() {
+		return evilFunds;
 	}
 }

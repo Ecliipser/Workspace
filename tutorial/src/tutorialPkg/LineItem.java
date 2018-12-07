@@ -8,11 +8,19 @@ public class LineItem {
 	public LineItem() {
 		qty = 0;
 	}
-	public LineItem(int qty, Product theProduct) {
+	public LineItem(Product theProduct, int qty) {
 		this.qty = qty;
 		this.theProduct = theProduct;
 	}
+	
+	public int getQty() {
+		return qty;
+	}
+	
+	public Product getTheProduct() {
+		return theProduct;
+	}
 	public String toString() {
-		return "Qty: " + qty + "theProduct: " + theProduct;
+		return "Product " + theProduct + " Quantity: " + qty;
 	}
 }
