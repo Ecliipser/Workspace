@@ -18,7 +18,7 @@ public class Customer {
 		
 	
 	}
-	public Customer(String name, String Location, double evilFunds) {
+	public Customer(String  Location, String name, double evilFunds) {
 		this.Location = Location;
 		this.name = name;
 		this.evilFunds = evilFunds;
@@ -27,7 +27,7 @@ public class Customer {
 	}
 	
 	public String toString() {
-		return "Name: " + name + " Location: " + Location + " evilFunds: " + evilFunds;
+		return "Location: " + Location + " Name: " + name +  " evilFunds: " + evilFunds;
 	
 	}
 	//add funds to customers evilfunds

@@ -17,12 +17,14 @@ public class Invoice {
 		
 	}
 	public void addToOrder(Product theProduct, int qty) {
-		LineItem L1 = new LineItem(theProduct, qty);
-		Item.add(L1);
+		Item.add(new LineItem(theProduct, qty));
 		
 	}
 	
 	public void printInvoice() {
+		for(int i = 0; i< Item.size(); i++) {
+			System.out.println(Item.get(i) + "Total $%.2f", (Item.get(i).getTheProduct().getPrice()* Item.get(i).getQty());
+		}
 		//Prints out all LineItems in the items ArrayList. 
 		//If customer can afford the purchase also print out that order is approved or 
 		//else if they can’t afford the order show how much they are short by.
