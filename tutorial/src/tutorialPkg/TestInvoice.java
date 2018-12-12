@@ -2,12 +2,13 @@ package tutorialPkg;
 
 public class TestInvoice {
 
+
 	public static void main(String[] args) {
 		//invoice run 1
 
-		Customer c = new Customer("island", "Dr evil", 1230.0);
-		Invoice in = new Invoice(c);
-		in.addToOrder(new Product("flame Thrower",123.80), 3);
+		Customer c = new Customer("island", "Dr evil", 1230.0);//this creates a new customer with these information
+		Invoice in = new Invoice(c);//creates new Invoice for the customer
+		in.addToOrder(new Product("flame Thrower",123.80), 3);//adds product in their order
 		in.addToOrder(new Product("sharks", 105.2),2);
 		in.addToOrder(new Product("lasers",50.5),20);
 		
@@ -49,16 +50,21 @@ public class TestInvoice {
 		runInvoice(c3, in3);
 		
 	}
-	public static void runInvoice(Customer c, Invoice i) {
-		i.printInvoice();
+	/**
+	 * this runs the inVoice method
+	 * @param c - Customer
+	 * @param i - Invoice for the customer
+	 */
+	public static void runInvoice(Customer c, Invoice i) {//Prints customer's invoice
+		i.printInvoice();//this runs the printInvoice in Invoice method
 
-		if(c.getEvilFunds()- i.amountDue() < 0) {
+		if(c.getEvilFunds()- i.amountDue() < 0) {//if statement sees if customer has not enough funds for their order
 			System.out.println("Evil villian credit union to the rescue!!");	
-			c.addFunds(i.amountDue() - c.getEvilFunds());
-			System.out.println("New funds total: " + c.getEvilFunds());
-			i.printInvoice();
+			c.addFunds(i.amountDue() - c.getEvilFunds());//adds funds to the customer's evilFunds so that their order can be approved
+			System.out.println("New funds total: " + c.getEvilFunds());//prints the new funds for customer
+			i.printInvoice();//runs printInvoice again so that the customer now has their order approved
 
-		}
+		}//end if
 		
 		
 	}//end runInvoice

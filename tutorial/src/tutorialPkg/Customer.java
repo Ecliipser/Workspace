@@ -1,24 +1,30 @@
 package tutorialPkg;
 
-/**
- * @author Marcl4
- *
- */
+
 public class Customer {
 
-	private String name;
-	private String Location;
-	private double evilFunds;
+	private String name;//Instance variable for customer's name
+	private String Location;//Instance variable for customer's location
+	private double evilFunds;//Instance variable for customer's evilFunds
 	
-	
-	public Customer() {
+	/**
+	 * Constructor for customer
+	 */
+	public Customer() {//sets blank values for the customer method
 		name = "null";
 		Location = " ";
 		evilFunds = 0;
 		
 	
 	}
-	public Customer(String  Location, String name, double evilFunds) {
+	
+	/**
+	 * Constructor for customer
+	 * @param Location - Location for customer
+	 * @param name - Name of customer
+	 * @param evilFunds - amount of evilFunds customer has
+	 */
+	public Customer(String  Location, String name, double evilFunds) {// fills the variable with values from parameter
 		this.Location = Location;
 		this.name = name;
 		this.evilFunds = evilFunds;
@@ -26,19 +32,20 @@ public class Customer {
 		
 	}
 	
-	public String toString() {
+	public String toString() {//returns values for all the variables from customer method
 		return "Location: " + Location + " Name: " + name +  " evilFunds: " + evilFunds;
 	
 	}
-	//add funds to customers evilfunds
-	public void addFunds(double addFunds) {
+	/**
+	 * 
+	 * @param addFunds - funds being added to evilFunds
+	 */
+	public void addFunds(double addFunds) {//adds funds to evilFunds
 		evilFunds += addFunds;
-	}
-	public void setEvilFunds(double evilFunds) {
-		this.evilFunds = evilFunds;
-	}
+	}//end addFunds
 	
-	public double getEvilFunds() {
+	
+	public double getEvilFunds() {// return value for evilFunds
 		return evilFunds;
-	}
+	}//end getEvilFunds
 }
