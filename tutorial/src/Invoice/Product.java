@@ -1,4 +1,4 @@
-package tutorialPkg;
+package Invoice;
 
 public class Product {
 
@@ -18,7 +18,7 @@ public class Product {
 	 * @param name - name of Product
 	 * @param price - price of Product
 	 */
-	public Product(String name, double price) {
+	public Product(String name, double price) {//sets values for variables using the parameter values
 		this.name = name;
 		this.price = price;
 	}

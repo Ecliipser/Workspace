@@ -1,4 +1,4 @@
-package tutorialPkg;
+package Invoice;
 import java.util.ArrayList;
 public class Invoice {
 
@@ -64,11 +64,12 @@ public class Invoice {
 	public boolean canAfford(Customer theCustomer) {//this checks if customer can afford their order in the arrayList
 		if(amountDue() <= theCustomer.getEvilFunds()){ //This checks to see if the amountDue is less than or equal to the customer's funds, 
 			return true;
+			//Returns true if customer can afford all purchase.
 
 		}//end if
 		else {
 			return false;
-			//Returns true if customer can afford all purchase.
+			//returns false if customer cannot afford the purchase
 		}//end else
 	}//end canAfford
 	
@@ -84,6 +85,6 @@ public class Invoice {
 		}//end for
 		
 		return totalPrice;
-		
+		//return totalPrice for customer
 	}//end amountDue
 }
