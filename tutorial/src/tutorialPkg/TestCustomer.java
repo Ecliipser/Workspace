@@ -1,4 +1,4 @@
-package Invoice;
+package tutorialPkg;
 
 public class TestCustomer {
 
